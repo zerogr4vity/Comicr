@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>ComicBookInfo</RootNamespace>
+  </PropertyGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="powershell -ExecutionPolicy Unrestricted $(SolutionDir)build\prebuild.ps1 -URL https://gist.githubusercontent.com/gotson/29ebdbc7e4a21c127889f065864a363b/raw/ComicInfo.xsd -TargetFile $(ProjectDir)ComicInfo.xsd&#xD;&#xA;" />
+    <Exec Command="call &quot;$(SolutionDir)build\&quot;XSDBuilder.bat &quot;$(ProjectDir)&quot; &quot;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.8 Tools\xsd.exe&quot;" />
+  </Target>
+
+</Project>
