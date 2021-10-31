@@ -1,1 +1,1 @@
-# Comicr
+# Comicr (Tentative project name)
