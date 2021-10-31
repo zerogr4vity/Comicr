@@ -363,4 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # Specific Project Files
-ComicBookInfo/ComicInfo.cs
+Comicr/ComicBookInfo/ComicInfo.cs
